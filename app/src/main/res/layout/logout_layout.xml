@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_28ssp"
+        android:background="@drawable/popup_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_24ssp"
+                android:layout_marginTop="@dimen/_33ssp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="@string/log_out"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:visibility="gone"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_28ssp"
+                android:layout_marginTop="@dimen/_26ssp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_4ssp"
+                android:text="@string/logout_quotes"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                tools:ignore="SpUsage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_16ssp"
+                android:layout_marginTop="@dimen/_28ssp"
+                android:layout_marginBottom="@dimen/_26ssp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_10ssp">
+
+                <Button
+                    android:id="@+id/btnYes"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/_50ssp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="@string/yes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNo"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/_50ssp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10ssp"
+                    android:background="@drawable/button_background_border"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="@string/no"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/_60ssp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_50ssp"
+                android:layout_height="@dimen/_50ssp"
+                android:indeterminateTint="@color/primaryColor"
+                android:scaleType="centerInside"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/progressBarHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.4"
+            android:animateLayoutChanges="true"
+            android:background="#A6EFEFEF"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</layout>

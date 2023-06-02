@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.AboutUsActivity">
+
+        <RelativeLayout
+            android:id="@+id/rlToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48ssp"
+            android:background="@color/primaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_56ssp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_10ssp"
+                android:scaleType="fitXY"
+                android:src="@drawable/back_icon"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10ssp"
+                android:layout_toEndOf="@id/ivBack"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:text="@string/menu_about_us"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivAppLogo"
+            android:layout_width="@dimen/_70ssp"
+            android:layout_height="@dimen/_70ssp"
+            android:layout_marginTop="@dimen/_80ssp"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/app_logo"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rlToolBar"
+            app:tint="@color/primaryDarkColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_26ssp"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="@dimen/_4ssp"
+            android:paddingHorizontal="@dimen/_31ssp"
+            android:text="@string/four_line_lorem_ipsum"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAppLogo"
+            tools:targetApi="o" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
